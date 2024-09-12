@@ -1,5 +1,6 @@
 ﻿
 using System.Drawing;
+using System.Runtime.InteropServices;
 
 int points = 0; 
 Console.WriteLine("Welcome to the dumbest quiz in the world");
@@ -24,17 +25,29 @@ if (answer1 == "b")
 {
     points++; 
     Console.WriteLine("Correct");
+    Console.WriteLine("Press any button to continue");
 }
 else 
 {
     Console.WriteLine("Wrong Answer");
+    Console.WriteLine("Press any button to continue");
 }
-
 
 Console.ReadLine();
 Console.Clear();
 Console.WriteLine("If you drop a yellow hat in the Red Sea, what does it become?");
 Console.WriteLine("A) Wet B) Purple C) Confused");
+
+while (answer1 != "a" && answer1 != "b" && answer1 != "c")
+{
+    Console.WriteLine("Chose between A, B Or C");
+    answer1 = Console.ReadLine();
+
+     if (answer1 != "a" && answer1 != "b" && answer1 != "c")
+     {
+        Console.WriteLine("You have to chose between the options A B Or C");
+     }
+}
 
 string answer2 = Console.ReadLine().ToLower();
 
@@ -53,6 +66,17 @@ Console.Clear();
 Console.WriteLine("If a tomato is a fruit, does that mean ketchup is a smoothie?");
 Console.WriteLine("A) Yes B) No C) ...................");
 
+while (answer1 != "a" && answer1 != "b" && answer1 != "c")
+{
+    Console.WriteLine("Chose between A, B Or C");
+    answer1 = Console.ReadLine();
+
+     if (answer1 != "a" && answer1 != "b" && answer1 != "c")
+     {
+        Console.WriteLine("You have to chose between the options A B Or C");
+     }
+}
+
 string answer3 = Console.ReadLine().ToLower();
 
 if (answer3 == "a" || answer3 == "c") 
@@ -64,5 +88,6 @@ else
 {
     Console.WriteLine("there was only one wrong answer and you still managed to get it wrong");
 }
+
 
 Console.ReadLine();
